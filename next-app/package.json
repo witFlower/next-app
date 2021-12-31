@@ -8,15 +8,30 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "next": "12.0.7",
+    "next-compose-plugins": "^2.2.1",
     "path": "^0.12.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.45.2"
   },
   "devDependencies": {
-    "eslint": "8.5.0",
-    "eslint-config-next": "12.0.7"
+    "autoprefixer": "^10.4.1",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "less": "^4.1.2",
+    "less-loader": "5",
+    "postcss-loader": "^6.2.1",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.8",
+    "webpack": "^5.65.0"
   }
 }
