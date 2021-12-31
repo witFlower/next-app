@@ -28,7 +28,7 @@ export default function Home({ allPostsData }) {
       <main className={styles.main}>
         <Layout>
           <h1 className={styles.title}>HELLO WORLD</h1>
-          {console.log(JSON.stringify(allPostsData))}
+          {/* {console.log(JSON.stringify(allPostsData))} */}
 
           <ul>
             {allPostsData.map(({ id, date, title }) => (
