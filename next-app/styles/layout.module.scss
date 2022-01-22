@@ -1,3 +1,5 @@
+@import './setting/setting';
+
 .inner {
   margin-top: 50px;
 }
@@ -5,4 +7,23 @@
   max-width: 1080px;
   padding: 0 1rem;
   margin: 0 auto;
+
+  @include mq-sp {
+    max-width: 100%;
+  }
+}
+
+.titleSmallText {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 400;
+}
+
+.startDate {
+  &:after {
+    display: inline-block;
+    content: '~';
+    margin: 0 3px;
+  }
 }

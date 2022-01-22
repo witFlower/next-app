@@ -1,0 +1,168 @@
+/* ------------------------
+  utilities Classes
+------------------------ */
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.u-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.u-hidden-sp {
+  @include mq-sp {
+    display: none !important;
+  }
+}
+
+.u-visible-sp {
+  display: none !important;
+
+  @include mq-sp {
+    display: block !important;
+  }
+}
+
+.u-hidden-pc {
+  display: none !important;
+
+  @include mq-sp {
+    display: block !important;
+  }
+}
+
+.u-visible-pc {
+  display: block !important;
+
+  @include mq-sp {
+    display: none !important;
+  }
+}
+
+.u-blind {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.u-blind.focusable:active,
+.u-blind.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+/* ------------------------
+  余白 調整用class
+------------------------ */
+@for $i from 0 through 5 {
+  // margin-top
+  .u-mt-#{(5 * $i)} {
+    margin-top: #{(5 * $i)}px !important;
+  }
+
+  // margin-bottom
+  .u-mb-#{(5 * $i)} {
+    margin-bottom: #{(5 * $i)}px !important;
+  }
+
+  // margin-left
+  .u-ml-#{(5 * $i)} {
+    margin-left: #{(5 * $i)}px !important;
+  }
+
+  // margin-right
+  .u-mr-#{(5 * $i)} {
+    margin-right: #{(5 * $i)}px !important;
+  }
+
+  // padding-left
+  .u-pl-#{(5 * $i)} {
+    padding-left: #{(5 * $i)}px !important;
+  }
+
+  // padding-right
+  .u-pr-#{(5 * $i)} {
+    padding-right: #{(5 * $i)}px !important;
+  }
+}
+
+/* ------------------------
+  text-align 調整用class
+------------------------ */
+.u-align-center {
+  text-align: center !important;
+}
+
+.u-align-left {
+  text-align: left !important;
+}
+
+.u-align-right {
+  text-align: right !important;
+}
+
+/* SPのみとPCのみ */
+@include mq-sp {
+  .is-only-PC {
+    display: none !important;
+  }
+
+  .is-only-SP {
+    display: block;
+  }
+}
+
+@include mq-pc {
+  .is-only-PC {
+    display: block;
+  }
+
+  .is-only-SP {
+    display: none !important;
+  }
+}
+
+.u-spBorderBottomNone {
+  @include mq-sp {
+    border-bottom: none !important;
+  }
+}
+
+.u-borderBottomNone {
+  border-bottom: none !important;
+}
+
+.react-container {
+  position: relative;
+  text-align: center;
+  margin-top: 100px;
+  height: 150px;
+}
+
+.u-pl-5 {
+  padding-left: 5px;
+}

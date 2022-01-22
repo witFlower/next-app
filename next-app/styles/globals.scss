@@ -1,11 +1,12 @@
 @import './reset.module.scss';
+@import './setting/setting.scss';
 @import './layout.module.scss';
 
 body {
   line-height: 1;
-  font-family: 'Gothic A1', sans-serif;
+  font-family: $font-kor;
   // font-family: 'Lora', serif;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $font-eng;
   color: #3e3e3e;
   letter-spacing: 1px;
 }
