@@ -1,7 +1,7 @@
-import Head from "next/head";
-import Layout from "../../components/Layout";
+import Head from 'next/head';
+import Layout from '@/components/Layout';
 
-import { getAllPostIds } from "../../lib/posts";
+import { getAllPostIds } from '../../lib/posts';
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();

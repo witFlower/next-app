@@ -1,9 +1,9 @@
-import styles from '../styles/layout.module.scss';
+import type { NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout from './Layout';
 
-export default function Navigation({ children }) {
+const Navigation: NextPage = ({ children }) => {
   return (
     <div className='globalNavigation'>
       <Layout>
@@ -52,4 +52,6 @@ export default function Navigation({ children }) {
       </Layout>
     </div>
   );
-}
+};
+
+export default Navigation;
