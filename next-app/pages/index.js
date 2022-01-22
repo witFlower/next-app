@@ -1,11 +1,9 @@
 import Head from 'next/head';
 // import Image from 'next/image';
-// import Link from 'next/link';
-import Footer from '../components/Footer';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import { getSortedPostsData } from '../lib/posts';
 import styles from '../styles/Home.module.scss';
-import layoutStyles from '../styles/layout.module.scss';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -26,9 +24,11 @@ export default function Home({ allPostsData }) {
       </Head>
       {/* <Image src="/images/profile.jpeg" width={300} height={300} alt={"yels"} /> */}
       <div className={layoutStyles.container}>
-        <main className={styles.main}>
+        <main className={styles.landing}>
           <Layout>
-            HELLO, THIS IS TOP PAGE
+            HELLO!
+            <br />
+            THIS is WitFLOWER's PORTFOLIO
             {/* {console.log(JSON.stringify(allPostsData))} */}
             {/* <ul>
               {allPostsData.map(({ id, date, title }) => (
@@ -39,9 +39,12 @@ export default function Home({ allPostsData }) {
                 </li>
               ))}
             </ul> */}
+            <br />
+            <Link href={'./top'}>
+              <a>GO</a>
+            </Link>
           </Layout>
         </main>
-        <Footer />
       </div>
     </>
   );

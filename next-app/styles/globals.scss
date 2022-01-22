@@ -1,31 +1,214 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import './reset.module.scss';
+@import './layout.module.scss';
 
-html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
+  line-height: 1;
+  font-family: 'Gothic A1', sans-serif;
+  // font-family: 'Lora', serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #3e3e3e;
+  letter-spacing: 1px;
 }
 
-* {
-  box-sizing: border-box;
+p {
+  line-height: 24px;
 }
 
-a {
-  color: #0070f3;
+.h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3e3e3e;
+  margin-bottom: 38px;
+  position: relative;
+  line-height: 2.4rem;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: auto;
+    bottom: -18px;
+    width: 20px;
+    height: 3px;
+    display: block;
+    background-color: #3e3e3e;
+  }
+}
+
+.h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #3e3e3e;
+}
+
+.h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: darkcyan;
+}
+
+.globalLogo {
+  margin-right: 10px;
+  font-size: 1rem;
+
+  a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+
+    &:before {
+      opacity: 0;
+      transition: 0.3s all;
+    }
+
+    &:hover {
+      span {
+        position: relative;
+
+        &:before {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -16px;
+          margin: auto;
+          width: 7px;
+          height: 7px;
+          border-top: 3px solid cadetblue;
+          border-left: 3px solid rgb(245, 188, 0);
+          border-radius: 2px;
+          transform: rotate(135deg);
+          transition: 0.3s all;
+        }
+      }
+      i {
+        transform: rotate(180deg);
+        border-radius: 2px;
+        border-top-right-radius: 18px;
+        border-top-left-radius: 60px;
+        border-bottom-right-radius: 18px;
+        border-bottom-left-radius: 60px;
+        position: absolute;
+        right: auto;
+        left: 0;
+        width: 3px;
+        height: 12px;
+        transition: 0.3s all;
+        background-color: rgb(124, 219, 136);
+        opacity: 0.7;
+      }
+    }
+  }
+
+  span {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  i {
+    width: 3px;
+    height: 32px;
+    content: '';
+    display: inline-block;
+    position: relative;
+    background-color: cadetblue;
+    transition: 0.3s all;
+    position: absolute;
+  }
+}
+
+.globalNavList {
+  margin: 0 10px;
+  list-style: none;
+}
+
+.globalNavLink {
+  color: darkcyan;
+  font-size: 1.2rem;
   text-decoration: none;
+  transition: 0.3s all;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
-a:hover {
-  text-decoration: underline;
+.globalNavigation {
+  width: 100%;
+  padding: 20px 14px;
+  color: darkcyan;
+  background: #fbfafa;
+  font-size: 1.8rem;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 4px;
+    background-color: darkcyan;
+    opacity: 0.4;
+    transition: 0.3s all;
+  }
+
+  &:hover {
+    &:after {
+      transition: 0.3s all;
+      opacity: 1;
+    }
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
-img {
-  max-width: 100%;
-  display: block;
+.globalfooter {
+  margin-top: 48px;
+  width: 100%;
+  padding: 20px 14px;
+  color: darkcyan;
+  background: #fbfafa;
+  text-align: center;
+}
+
+.globalNav {
+  display: flex;
+}
+
+.landing {
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 10px;
+  line-height: 2rem;
+  font-size: 1.6rem;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
