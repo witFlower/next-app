@@ -4,9 +4,7 @@
 
 body {
   line-height: 1;
-  font-family: $font-kor;
-  // font-family: 'Lora', serif;
-  font-family: $font-eng;
+  font-family: $font-family;
   color: #3e3e3e;
   letter-spacing: 1px;
 }
@@ -50,19 +48,21 @@ p {
 .globalLogo {
   margin-right: 10px;
   font-size: 1rem;
+  color: darkcyan;
 
   a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-decoration: none;
+    position: relative;
 
     &:before {
       opacity: 0;
       transition: 0.3s all;
     }
 
-    &:hover {
+    .globalNavigation:hover & {
       span {
         position: relative;
 
@@ -92,7 +92,7 @@ p {
         border-bottom-left-radius: 60px;
         position: absolute;
         right: auto;
-        left: 0;
+        left: -4px;
         width: 3px;
         height: 12px;
         transition: 0.3s all;
@@ -125,7 +125,6 @@ p {
 }
 
 .globalNavLink {
-  color: darkcyan;
   font-size: 1.2rem;
   text-decoration: none;
   transition: 0.3s all;
@@ -136,11 +135,19 @@ p {
   }
 }
 
+@keyframes navigationBorderColor {
+  0% {
+    background-color: rgb(177, 176, 164);
+  }
+  100% {
+    background-color: darkcyan;
+  }
+}
+
 .globalNavigation {
   width: 100%;
   padding: 20px 14px;
-  color: darkcyan;
-  background: #fbfafa;
+  background: #fff;
   font-size: 1.8rem;
   position: relative;
 
@@ -154,15 +161,18 @@ p {
     margin: auto;
     width: 100%;
     height: 4px;
-    background-color: darkcyan;
+    background-color: #3e3e3e;
     opacity: 0.4;
-    transition: 0.3s all;
   }
 
   &:hover {
     &:after {
-      transition: 0.3s all;
-      opacity: 1;
+      animation-name: navigationBorderColor;
+      animation-duration: 2s;
+      animation-duration: leaner;
+      animation-iteration-count: 1;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
     }
   }
   > div {
@@ -185,19 +195,6 @@ p {
   display: flex;
 }
 
-.landing {
-  min-height: 100vh;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 10px;
-  line-height: 2rem;
-  font-size: 1.6rem;
-}
-
 .footer {
   display: flex;
   flex: 1;
@@ -212,4 +209,82 @@ p {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+
+.button-wrap {
+  display: flex;
+  width: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.game-section {
+  margin-top: 60px;
+}
+.game-title {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  line-height: 30px;
+
+  i {
+    font-size: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
+
+.game-value {
+  display: block;
+  text-align: center;
+  font-size: 74px;
+  margin: 0 auto;
+  line-height: 100px;
+
+  .coment-game & {
+    font-size: 40px;
+    color: blueviolet;
+  }
+}
+
+.textbox {
+  input {
+    padding: 8px 15px;
+    font-size: 24px;
+    border: 2px solid blueviolet;
+    border-radius: 8px;
+    margin: 0 3px;
+  }
+}
+
+.button {
+  font-size: 24px;
+  margin-right: 4px;
+  font-weight: bold;
+
+  > label {
+    padding: 10px 15px;
+
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 8px;
+    border: 2px solid blueviolet;
+    color: blueviolet;
+    background-color: #fff;
+    box-shadow: 4px 4px 5px 2px rgb(0 0 0 / 14%);
+
+    &:hover {
+      opacity: 0.7;
+      transition: 0.3s all;
+      border-color: #3e3e3e;
+      color: #3e3e3e;
+      box-shadow: none;
+    }
+  }
+
+  > input {
+    display: none;
+  }
 }
