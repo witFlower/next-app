@@ -2,8 +2,8 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { getAllPostIds } from '../../lib/posts';
 import Layout from '@/components/Layout';
-import AddComment from '@/components/games/AddComment';
-import Count from '@/components/games/Count';
+import CountBlock from '@/components/games/CountBlock';
+import TodoBlock from '@/components/games/TodoBlock';
 import styles from '@/styles/Home.module.scss';
 
 // export async function getStaticPaths() {
@@ -26,8 +26,8 @@ export default function Games() {
       <Head>
         <title>This page is Games page</title>
       </Head>
-      <Count />
-      <AddComment />
+      <CountBlock />
+      <TodoBlock />
     </Layout>
   );
 }

@@ -221,7 +221,7 @@ p {
 .game-section {
   margin-top: 60px;
 }
-.game-title {
+.mdl-title {
   font-size: 20px;
   display: block;
   text-align: center;
@@ -286,5 +286,29 @@ p {
 
   > input {
     display: none;
+  }
+}
+
+input {
+  display: none;
+
+  &[type='checkbox'] {
+    + label {
+      border-radius: 50%;
+      margin: 3px 3px 3px 0;
+      padding: 6px 6px;
+      background-color: white;
+      border: 1px solid blueviolet;
+      display: inline-block;
+      appearance: auto;
+      vertical-align: text-bottom;
+      writing-mode: horizontal-tb !important;
+      box-sizing: border-box;
+    }
+  }
+  &:checked {
+    + label {
+      background-color: blueviolet;
+    }
   }
 }

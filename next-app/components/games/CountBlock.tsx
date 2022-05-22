@@ -1,11 +1,12 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
+import Title from './Title';
 
 export interface gamesState {
   count: number | undefined;
 }
 
-const Count: NextPage = () => {
+const CountBlock: NextPage = () => {
   const [count, setCount] = useState(0);
   const calculateNum = (num: number, calcuration: string) => {
     calcuration === 'plus' && setCount(count + num);
@@ -16,10 +17,7 @@ const Count: NextPage = () => {
 
   return (
     <section className='game-section count-game'>
-      <h2 className='game-title'>
-        <i>☺️</i>
-        count더하기, 빼기
-      </h2>
+      <Title title='Simple Calculator' />
       <p className='game-value'>{count}</p>
       <div className='button-wrap'>
         <div
@@ -75,4 +73,4 @@ const Count: NextPage = () => {
   );
 };
 
-export default Count;
+export default CountBlock;
