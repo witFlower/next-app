@@ -1,3 +1,60 @@
 .container {
   padding: 0 2rem;
 }
+
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  margin-left: -1500px;
+}
+
+.parallaxLayer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallaxLayer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.parallaxCover {
+  background: #2d112b;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 2;
+}
+
+.parallaxLayer0 {
+  transform: translateZ(-300px) scale(4);
+}
+.parallaxLayer1 {
+  transform: translateZ(-250px) scale(3.5);
+}
+.parallaxLayer2 {
+  transform: translateZ(-200px) scale(3);
+}
+.parallaxLayer3 {
+  transform: translateZ(-150px) scale(2.5);
+}
+.parallaxLayer4 {
+  transform: translateZ(-100px) scale(2);
+}
+.parallaxLayer5 {
+  transform: translateZ(-50px) scale(1.5);
+}
